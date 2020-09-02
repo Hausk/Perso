@@ -1,0 +1,18 @@
+{
+    "description": "Site perso pour le projet 5 OC",
+    "name": "jonathan/site",
+    "authors": [
+        {
+            "name": "Jonathan Bessa",
+            "email": "dbessa.jonathan@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Router\\": "routes/",
+            "App\\": "App/",
+            "Database\\": "database/"
+        }
+    },
+    "require": {}
+}
