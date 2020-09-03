@@ -19,5 +19,6 @@ $router->get('/', 'App\Controllers\AppController@home');
 $router->get('/portfolio', 'App\Controllers\AppController@portfolio');
 $router->get('/contact', 'App\Controllers\AppController@contact');
 $router->get('/about', 'App\Controllers\AppController@about');
+$router->get('/cv', 'App\Controllers\AppController@cv');
 
 $router->run();

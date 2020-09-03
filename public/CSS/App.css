@@ -6,7 +6,7 @@
     font-family: Alata;
 }
 body {
-    background-image: linear-gradient(to top, #f342fb, #e738eb, #db2fdb, #ce24cc, #c219bd, #b613b0, #ab0ba4, #9f0498, #92048b, #85047f, #780472, #6b0466);
+    background: black;
 }
 h1 {
     font-size: 5rem;
@@ -45,8 +45,6 @@ h4 {
     background-color: #ecf0f1;
     display: block;
     margin: 5px 25px 0 0;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
     transition: all .3s ease-in-out;
 }
 .line:nth-child(2) {
@@ -89,13 +87,13 @@ h4 {
 
 /* Première page */
 
+.s1 {
+    background: black;
+    z-index: 5;
+}
 .title {
     color: #fff;
-    position: absolute;
     overflow: hidden;
-    top: 50%;
-    -webkit-transform: translate3d(0, -50%, 0);
-    transform: translate3d(0, -50%, 0);
     z-index: 200;
     padding: 50px 0;
     text-align: center;
@@ -139,15 +137,17 @@ nav {
 /* Portfolio */
 
 .s2 {
+    animation: zoomin 10s linear infinite;
+    transition: all .2s linear;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     margin: 0 auto;
     padding: 0 auto;
     background: url(../IMG/Bg_1.jpg) no-repeat;
     background-size: 100%;
 }
 .title-s2 {
-    margin-left: 25px;
     letter-spacing: 0.2em;
 }
 .s2-button {
@@ -168,3 +168,57 @@ nav {
 
 
 /* About me */
+
+.content-s3 {
+    width: 100%;
+    height: 100vh;
+    display: grid !important;
+    grid-template-rows: 10% 10% 5% 60% 10% 5% ;
+    grid-template-columns: 5% 41% 3% 41% 10% ;
+    background: black;
+    z-index: 5;
+}
+.title-s3 {
+    margin: auto;
+    grid-area: 2 / 2 / 2 / 2;
+    padding: 0;
+}
+.title-s3 h1 {
+    font-size: 4rem;
+}
+.img-aboutme{
+    background: url(../IMG/portfolio.jpeg) no-repeat;
+    background-size: 100%;
+    grid-area: 4 / 4 / 4 / 4;
+}
+.presentation-aboutme {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.2em ;
+    color: white;
+    text-align: center;
+    grid-area: 4 / 2 / 4 / 2;
+}
+.btn-aboutme {
+    grid-area: 5 / 4 / 5 / 4;
+    text-align: center;
+    margin: auto;
+}
+
+
+
+/* Contact */
+.s4 {
+    background: black;
+    z-index: 5;
+}
+.title-s4 {
+    margin: inherit;
+    padding: 0;
+}
+.contact-after {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+/* Animations */

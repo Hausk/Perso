@@ -7,4 +7,10 @@ new fullpage('#fullpage', {
 	easingcss3: 'ease',
 	loopBottom: true,
 	loopTop: true,
+
+	//Design
+
+	parallax: true,
+	parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+
 });

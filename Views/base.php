@@ -10,13 +10,14 @@
     <link rel="shortcut icon" href="" type="image/x-icon">
     <link rel="stylesheet" href="<?= SCRIPTS . 'CSS' . DIRECTORY_SEPARATOR . 'fullpage.css' ?>">
     <link rel="stylesheet" href="<?= SCRIPTS . 'CSS' . DIRECTORY_SEPARATOR . 'App.css'?>">
+    <link rel="stylesheet" href="<?= SCRIPTS . 'CSS' . DIRECTORY_SEPARATOR . $CSS ?>">
     <title>test</title>
 </head>
 <body>
     <nav>
         <div id="navigation">
             <div class="header-content">
-            <div class="brand"><a title="Bessa Jonathan" target="_blank" href="https://github.com/Hausk">Bessa Jonathan</a></div>
+            <div class="brand"><a title="Bessa Jonathan" target="_blank" href="./">Bessa Jonathan</a></div>
             </div>
             <div id="navbar">
                 <div class="nav-item">
