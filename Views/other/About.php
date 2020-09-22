@@ -35,13 +35,13 @@
         </div>
         <div class="passion passion-2">
             <div class="img-passion code"></div>
-            <div class="title-passion"><p>Developpement</p></div>
-            <div class="text-passion"></div>
+            <div class="title-passion"><p>Développer</p></div>
+            <div class="text-passion"><p>J'aime prendre du temps pour développer, pour le moment des sites internet et surement dans peu de temps je passerais a de l'automatisation programmée que ce soit via un site ou non, j'aime que les choses soit claires et bien ficelées.</p></div>
         </div>
         <div class="passion passion-3">
             <div class="img-passion music"></div>
-            <div class="title-passion"><p>Découverte</p></div>
-            <div class="text-passion"></div>
+            <div class="title-passion"><p>Musique</p></div>
+            <div class="text-passion"><p>Je suis un grand fan de musique quel que soit le type même si j'ai mes préférences, la musique me motive, coupler la musique et le code </p></div>
         </div>
     </div>
 </div>

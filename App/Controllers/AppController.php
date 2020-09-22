@@ -20,7 +20,7 @@ class AppController extends Controller {
     {
         return $this->view('other.about');
     }
-    public function CV()
+    public function cv()
     {
         return $this->view('other.cv');
     }

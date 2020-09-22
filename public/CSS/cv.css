@@ -1,0 +1,187 @@
+body {
+    background-color: black;
+}
+
+h4 {
+    font-size: 1.3rem;
+    margin-left: 40px;
+}
+h2 {
+    font-size: 1.5rem;
+    margin-left: 40px;
+}
+
+.blue-text {
+    color: #009adc !important;
+}
+.blue {
+    background-color: #009adc !important;
+}
+.white-text {
+    color: #ffffff !important;
+}
+.white {
+    background: #ffffff !important;
+}
+.grey {
+    background-color: #bbbfcb !important;
+}
+
+.line {
+    width: 60%;
+    height: 2px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.flex {
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+}
+
+
+#navigation {
+    position: relative;
+    transition: .2s ease-in-out;
+}
+
+.content{
+    width: 90vw;
+    margin: auto auto;
+    background-color: #eeeeee;
+    margin: 50px auto;
+    border: 5px solid rgba(0,0,0,0.9);
+    box-shadow: inset 5px 5px 10px rgba(0,0,0,0.5);
+}
+.content-cv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.left-side {
+    width: 100%;
+}
+.title-cv {
+    padding: 25px 0 25px 0;
+    background-color: white;
+    box-shadow: inset 5px 5px 10px rgba(0,0,0,0.5);
+    width: 100%;
+}
+
+.diplomes, .experiences, .competences {
+    padding: 20px 0 20px 0;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    background-color: #009adc;
+    border-radius: 50%;
+}
+.circle-txt {
+    color: white;
+    font-size: 0.7rem;
+    text-align: center;
+    margin-top: 25px;
+}
+.actual {
+    margin-top: 30px;
+}
+.text-cv {
+    max-width: 50%;
+    width: 50%;
+    margin: auto 0 auto 40px;
+}
+.exemple {
+    margin-left: 40px;
+    width: 70%;
+    color: #595959;
+    font-size: 0.8rem;
+}
+
+.diplome {
+    margin-top: 20px;
+}
+.competences-content {
+    margin-top: 25px;
+    margin-left: 40px;
+}
+
+
+.aside-content {
+    position: absolute;
+    margin: 15px 25px 0 0;
+    background-color: #009adc;
+    width: 30%;
+    right: 70px;
+    float: right;
+    border-radius: 50px 0 25px 25px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+.acquis-ul {
+    padding: 20px 0 20px 0;
+    width: 100%;
+    text-align: left;
+    margin-left: 40px;
+    line-height: 2rem;
+}
+
+.lang, .atouts-content, .voyage-content, .centre-content {
+    margin-left: 40px;
+    padding: 15px 0 20px 0;
+}
+.title-aside {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.voyage p, .centre p {
+    margin-top: 1.2rem;
+}
+
+/* barres */
+.progress-bars {
+    background-color: #eeeeee;
+    border-radius: 1px;
+    box-shadow: 0 1px 5px rgba(136,86,97, 0.5);
+    margin: 15px 0;
+    height: 10px;
+    width: 400px;
+    max-width: 90%;
+}
+.progress {
+    background: #009adc;
+    border-radius: 1px;
+	height: 10px;
+    width: 0;
+    transition: width 0.5s ease-in ;
+}
+.competences-content .progress-bars {
+    width: 700px;
+    max-width: 70%;
+}
+.download {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 50px 0 25px 0;
+}
+.btn-download {
+    background-color: #009adc;
+    padding: 10px 20px;
+    border-radius: 0 500px 0 500px;
+    color: #ffffff;
+    transition: .3s ease-in-out;
+}
+.btn-download:hover {
+    border-radius: 500px 0 500px 0;
+    transition: .3s ease-in-out;
+}
+.btn-2 {
+    background-color: #eeeeee;
+    border-radius: 500px 0 500px 0;
+    color: #000000;
+}
+.btn-2:hover {
+    border-radius: 0 500px 0 500px;
+}

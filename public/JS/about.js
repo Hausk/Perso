@@ -10,6 +10,13 @@ $('.progress-bar').each(function() {
       });
   });
 
+const progress_bars = document.querySelectorAll('.progress');
+
+progress_bars.forEach(bar => {
+    const { size } = bar.dataset;
+    bar.style.width = `${size}%`;
+});
+
 $(document).ready(function(){
   $(".hamburger").click(function(){
     $(this).toggleClass("is-active");

@@ -117,12 +117,14 @@ img {
     height: 120px;
 }
 .code {
+    background: url(../IMG/dev.png) no-repeat;
+    background-size: 100%;
     border-radius: 15px;
-    background: black;
 }
 .music {
+    background: url(../IMG/music.png) no-repeat;
+    background-size: 100%;
     border-radius: 15px;
-    background: olive;
 
 }
 .title-passion {
