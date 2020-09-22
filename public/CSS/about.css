@@ -1,5 +1,6 @@
 body {
-    color: white;
+    color: black;
+    background: #ffffff;
 }
 ul, li {
     list-style: none;
@@ -10,19 +11,31 @@ img {
     vertical-align: middle;
     width: 100%;
 }
-.about-appear {
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(to left, #29323c, #485563);
-}
 #navigation {
     position: fixed;
+    transition: .2s ease-in-out;
 }
 .pack {
     width: 100%;
     margin: auto;
 }
-
+.arrow-return {
+    background: transparent;
+    position: absolute;
+    left: 25px;
+    top: 10vh;
+    width: 10%;
+}
+.fa-arrow-left {
+    cursor: pointer;
+    color: white;
+    transition: 1.5s linear;
+}
+.arrow-return:hover {
+    transition: 1.2s linear;
+    cursor: pointer;
+    animation: before 1.5s ease-in-out infinite;
+}
 /* 01 Qui suis-je ? */
 
 
@@ -31,18 +44,18 @@ img {
     margin-top: 5%;
     height: 90vh;
     grid-template-columns: 5% 5% 10% 20% 10% 35% 5%;
-    grid-template-rows: 10% 5% 40% 40% 5%;
+    grid-template-rows: 15% 5% 40% 35% 5%;
 }
 .flat {
     grid-area: 1 / 1 / 1 / 1;
     width: 50px;
     height: 5px;
-    background-color: white;
+    background-color: #000000;
     margin: auto 0;
     text-align: left;
 }
 .heading-num {
-    grid-area: 1 / 2 / 1 / 2;
+    grid-area: 1 / 3 / 1 / 3;
     font-size: 4rem;
     color: red;
     margin: auto;
@@ -67,6 +80,7 @@ img {
     width: 100%;
     height: 100%;
     background: orchid;
+    box-shadow: -7px 25px 65px -7px rgba(0,0,0,0.6);
 }
 
 /* 02 Passions */
@@ -89,7 +103,6 @@ img {
     margin-top: 50px;
     height: 100%;
     width: 30%;
-    background: green;
 }
 .img-passion {
     height: 30%;
@@ -97,11 +110,31 @@ img {
     margin: auto;
     background: white;
 }
+.img-passion {
+    background: url(../IMG/voyage.png) no-repeat;
+    background-size: 100%;
+    width: 120px;
+    height: 120px;
+}
+.code {
+    border-radius: 15px;
+    background: black;
+}
+.music {
+    border-radius: 15px;
+    background: olive;
+
+}
+.title-passion {
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: bold;
+}
 .text-passion {
     height: 70%;
     width: 100%;
     margin-top: 15px;
-    background: red;
+    text-shadow: -5px 5px 5px rgba(0,0,0,0.5);
     text-align: center;
 }
 
@@ -113,8 +146,9 @@ img {
     grid-template-rows: 15% 85%;
 }
 .skills-list {
+    margin-left: 30px;
     margin-bottom: 50px;
-    grid-area: 2 / 3 / 2 / 7;
+    grid-area: 2 / 2 / 3 / 8;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -125,7 +159,7 @@ img {
     justify-content: space-between;
 }
 .skill-column {
-    width: 40%;
+    width: 45%;
 }
 .details {
     width: 85.1063%;
@@ -143,29 +177,56 @@ img {
     align-items: center;
 }
 .logo-skill {
-    width: 25.6382%;
     -ms-flex-item-align: center;
     align-self: center;
 }
+.logo-skill img {
+    height: 50px;
+    vertical-align: bottom;
+    width: unset;
+    max-width: 60px;
+}
 .title-skill {
-    width: 100%;
-    text-align: center;
-    margin: auto;
     margin-bottom: 0.8rem;
 }
+.titles-progress {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 15px;
+}
+.time-skill {
+    color: rgba(0,0,0,0.6);
+}
 .barres, .barre {
-    background: white;
-    border-radius: 15px;
+    background: rgba(0,0,0,0.1);
+    box-shadow: inset -8px 5px 25px rgba(255,255,255,0.5);
+    border-radius: 5px 20px 20px 5px;
 }
 .progress-bar {
-    background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+    background-image: linear-gradient(to right, #361ce3, #2a36e9, #2048ee, #1c58f1, #2266f3, #2672f5, #2f7cf5, #3c87f5, #4892f4, #569cf3, #66a6f1, #77b0ee);
     max-width: 100%;
     transition: all 2s ease-in-out;
-    border-radius: 15px;
+    border-radius: 5px 20px 20px 5px;
     margin: 0;
 }
 .valor-progress {
     color: white;
     text-align: center;
     font-size: 1.5em;
+}
+
+@keyframes before {
+    from {
+        left: 24px;
+    }
+    25% {
+        left: 15px;
+    }
+    to {
+        left: 35px;
+    }
+    to {
+        left: 25px;
+    }
 }

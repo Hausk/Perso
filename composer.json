@@ -11,7 +11,7 @@
         "psr-4": {
             "Router\\": "routes/",
             "App\\": "App/",
-            "Database\\": "database/"
+            "Database\\": "Database/"
         }
     },
     "require": {}

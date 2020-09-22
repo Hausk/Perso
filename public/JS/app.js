@@ -3,14 +3,8 @@ new fullpage('#fullpage', {
     navigation: true,
 
     //Scrolling
-	scrollingSpeed: 600,
+	scrollingSpeed: 700,
 	easingcss3: 'ease',
 	loopBottom: true,
 	loopTop: true,
-
-	//Design
-
-	parallax: true,
-	parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
-
 });

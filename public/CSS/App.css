@@ -4,6 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: Alata;
+    list-style-type: none;
 }
 body {
     background: black;
@@ -53,8 +54,7 @@ h4 {
 .hamburger:hover{
     cursor: pointer;
 }
-#hamburger-3.is-active .line:nth-child(1),
-#hamburger-3.is-active .line:nth-child(2){
+#hamburger-3.is-active .line{
   width: 30px;
 }
 #hamburger-3.is-active .line:nth-child(1){
@@ -86,7 +86,6 @@ h4 {
 }
 
 /* Première page */
-
 .s1 {
     background: black;
     z-index: 5;
@@ -145,7 +144,7 @@ nav {
     margin: 0 auto;
     padding: 0 auto;
     background: url(../IMG/Bg_1.jpg) no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 .title-s2 {
     letter-spacing: 0.2em;
@@ -209,16 +208,164 @@ nav {
 
 /* Contact */
 .s4 {
-    background: black;
+    background-image: linear-gradient(to top, #90dbeb, #78ccdf, #5fbcd2, #43adc7, #199ebb);;
     z-index: 5;
+}
+.s4 h2 {
+    text-align: center;
+    font-size: 2rem;   
+    margin: auto;
+    padding-bottom: 10px;
+    width: 250px;
+    color: #78788c;
+    border-bottom: 3px solid #78788c;
+}
+.s4 p:before {
+    content: attr(name);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: #5a5a5a;
 }
 .title-s4 {
     margin: inherit;
     padding: 0;
 }
-.contact-after {
+
+.contact-form {
+    width: 50%;
+    height: 450px;
+    background: #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
     margin: auto;
-    display: flex;
-    flex-direction: column;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    padding: 15px 0;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: 'Montserrat',sans-serif;
+    transition: all .3s;
+    border-bottom: 2px solid #bebed2;
+    transition: .5s ease-in-out;
+}
+input:focus {
+    transition: .5s ease-in-out;
+    border-bottom-color: #66c887;
+}
+.btn-contact {
+    float: left;
+    padding: 10px 20px;
+    margin: 30px 0 0;
+    font-family: 'Montserrat',sans-serif;
+    border: 2px solid #78788c;
+    background: 0;
+    color: #5a5a6e;
+    cursor: pointer;
+    transition: all .5s;
+}
+.contact-footer {
+    text-align: center;
+    content: 'Hi';
+    position: absolute;
+    bottom: -15px;
+    right: -20px;
+    background: #50505a;
+    color: #fff;
+    width: 320px;
+    padding: 16px 4px 16px 0;
+    border-radius: 6px;
+    font-size: 13px;
+    box-shadow: 10px 10px 40px -14px #000;
+}
+.btn-contact:hover, .btn-contact:focus {
+    box-shadow: inset 7.5em 0 0 0 #66c887;
+    border-color: #787878;
+}
+.offset {
+    box-shadow: 0.3em 0.3em 0 0 #8fc866, inset 0.4em 0.8em 0 0 #8fc866;
+}
+.offset:hover, .offset:focus {
+    box-shadow: 0 0 0 0 #66c887, inset 6em 3.5em 0 0 #66c887;
+}
+button {
+    color: #66c887;
+}
+button:hover, button:focus {
+    border-color: #66c887;
+    color: #fff;
 }
 /* Animations */
+
+/* Tablette */
+@media screen and (max-width:768px) {
+    /* first */
+
+    /* second */
+
+    /* third */
+    .title-s3 {
+        grid-area: 2 / 2 / 2 / 5;
+    }
+    .title-s3 h1 {
+        font-size: 2em;
+    }
+    .img-aboutme {
+        display: none;
+    }
+    .presentation-aboutme {
+        font-size: 20px;
+        grid-area: 4 / 2 / 4 / 5;
+    }
+    .btn-aboutme {
+        grid-area: 5 / 2 / 5 / 5;
+    }
+
+    /* fourth */
+
+    .contact-footer {
+        width: 245px;
+    }
+}
+/* Version Mobile */
+@media screen and (min-width:320px) and (max-width:425px) {
+    
+    /*First */
+    .title-s1 h1 {
+        font-size: 3rem;
+    }
+    .title-s1 h4 {
+        font-size: 1.5rem;
+    }
+    
+    /* Second */
+    .title-s2 h2 {
+        font-size: 3rem;
+    }
+
+    /* Third */
+    .content-s3 {
+        grid-template-columns: 10% 38% 5% 37% 10%;
+    }
+    .presentation-aboutme {
+        font-size: 16px;
+    }
+    
+    /* Fourth */
+    .contact-form {
+        width: inherit;
+    }
+    .contact-footer {
+        right: -10px;
+    }
+}

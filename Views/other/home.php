@@ -31,16 +31,21 @@
     </section>
     <section class="section s4">
         <div class="s4-content">
-            <div class="title title-s4">
-                <h1>Contact</h1>
-            </div>
-            <div class="contact-after">
-                <a><i class="far fa-envelope fa-2x"></i>Dbessa.jonathan@gmail.com</a>
-                <a><i class="fab fa-linkedin fa-2x"></i>Mon Linkedin</a>
-            </div>
+            <form action="" method="post" class="contact-form">
+                <h2>Contactez moi</h2>
+                <p name="Nom:"><input placeholder="Entrez votre nom ici"></p>
+                <p name="Email:"><input placeholder="Entrez votre adresse mail ici"></p>
+                <p name="Message:"><input placeholder="Entrez votre message ici"></p>
+                <button class="btn-contact" id="submit" type="submit">Envoyer !</button>
+                <div class="contact-footer">
+                    <span class="fa fa-envelope-o"></span>
+                    dbessa.jonathan@gmail.com
+                </div>
+            </form>
         </div>
     </section>
 </div>
 
+<script src="<?= SCRIPTS . 'JS' . DIRECTORY_SEPARATOR . 'parallax.js'?>" crossorigin="anonymous"></script>
 <script src="<?= SCRIPTS . 'JS' . DIRECTORY_SEPARATOR . 'fullpage.js'?>" crossorigin="anonymous"></script>
 <script src="<?= SCRIPTS . 'JS' . DIRECTORY_SEPARATOR . 'app.js'?>" crossorigin="anonymous"></script>
