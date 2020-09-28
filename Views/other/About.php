@@ -19,7 +19,7 @@
         <h1>Bessa Jonathan</h1>
     </div>
     <div class="para-01">
-        <p>Sweet lollipop liquorice gummi bears. Caramels bear claw gummi bears donut soufflé muffin. Gummi bears marzipan cupcake cake cotton candy pie brownie powder tiramisu. Chocolate sesame snaps chupa chups chocolate danish pie. Sweet chocolate cake tiramisu pastry. Tootsie roll liquorice cookie gingerbread toffee jujubes. Brownie ice cream pastry lollipop cookie. Chocolate gingerbread brownie wafer gummi bears. Chocolate.</p>
+        <p>Actuellement étudiant développeur web Junior chez <span class="purple-text">Openclassrooms</span> et ayant déjà développé quleques sites en Php - mySql / Javascript - jQuery / Puis quelques petits projets en VueJs 2 - Laravel 7. </p>
     </div>
     <div class="img-para-01"></div>
 </div>

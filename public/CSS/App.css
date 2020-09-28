@@ -6,6 +6,11 @@
     font-family: Alata;
     list-style-type: none;
 }
+.purple-text {
+    color: #7451eb;
+}
+
+
 body {
     background: black;
 }
@@ -155,6 +160,7 @@ nav {
 }
 .btn-portfolio {
     margin: 0;
+    cursor: not-allowed;
 }
 .btn-portfolio:hover {
     transition: .3s;
@@ -254,7 +260,6 @@ input {
     width: 100%;
     padding: 15px 0;
     box-sizing: border-box;
-    background: none;
     outline: none;
     resize: none;
     border: 0;
@@ -262,11 +267,14 @@ input {
     transition: all .3s;
     border-bottom: 2px solid #bebed2;
     transition: .5s ease-in-out;
+    background: none;
 }
 input:focus {
     transition: .5s ease-in-out;
-    border-bottom-color: #66c887;
+    border-bottom-color: #009adc;
 }
+
+
 .btn-contact {
     float: left;
     padding: 10px 20px;

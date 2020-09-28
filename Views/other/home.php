@@ -13,9 +13,9 @@
     </section>
     <section class="section s2">
         <div class="title title-s2">
-            <h2>Mon Portfolio</h2>
+            <h2>Exemples de sites</h2>
             <div class="s2-button">
-                <a title="Consulter le site" class="btn btn-portfolio" target="_blank" href="">En voir plus</a>
+                <a title="PAGE EN COURS DE DEV" class="btn btn-portfolio">En voir plus</a>
             </div>
         </div>
     </section>
@@ -33,13 +33,13 @@
         <div class="s4-content">
             <form action="" method="post" class="contact-form">
                 <h2>Contactez moi</h2>
-                <p name="Nom:"><input placeholder="Entrez votre nom ici"></p>
-                <p name="Email:"><input placeholder="Entrez votre adresse mail ici"></p>
-                <p name="Message:"><input placeholder="Entrez votre message ici"></p>
+                <div class="name-input"><p name="Nom:"><input placeholder="Nom" class="inputer"></p></div>
+                <div class="name-input"><p name="Email:"><input placeholder="Email" class="inputer"></p></div>
+                <div class="name-input"><p name="Message:"><input placeholder="Message" class="inputer"></p></div>
                 <button class="btn-contact" id="submit" type="submit">Envoyer !</button>
                 <div class="contact-footer">
                     <span class="fa fa-envelope-o"></span>
-                    dbessa.jonathan@gmail.com
+                    Dbessa.jonathan@gmail.com
                 </div>
             </form>
         </div>

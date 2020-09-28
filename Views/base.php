@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="<?= SCRIPTS . 'CSS' . DIRECTORY_SEPARATOR . 'fullpage.css' ?>">
     <link rel="stylesheet" href="<?= SCRIPTS . 'CSS' . DIRECTORY_SEPARATOR . 'App.css'?>">
     <link rel="stylesheet" href="<?= SCRIPTS . 'CSS' . DIRECTORY_SEPARATOR . $CSS ?>">
-    <title>test</title>
+    <title>Bessa - Jonathan</title>
 </head>
 <body>
     <nav>
         <div id="navigation">
             <div class="header-content">
-            <div class="brand"><a title="Bessa Jonathan" target="_blank" href="./">Bessa Jonathan</a></div>
+            <div class="brand"><a title="Bessa Jonathan" href="./">Bessa Jonathan</a></div>
             </div>
             <div id="navbar">
                 <div class="nav-item">
@@ -34,8 +34,11 @@
     </nav>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="<?= SCRIPTS . 'JS' . DIRECTORY_SEPARATOR . 'ajax.js'?>"></script>
     <?= $content?>
     <script src="https://kit.fontawesome.com/1c182ad81c.js" crossorigin="anonymous"></script>
+    <script src="<?= SCRIPTS . 'JS' . DIRECTORY_SEPARATOR . 'home.js'?>" crossorigin="anonymous"></script>
     <script src="<?= SCRIPTS . 'JS' . DIRECTORY_SEPARATOR . 'about.js'?>" crossorigin="anonymous"></script>
+    <script src="<?= SCRIPTS . 'JS' . DIRECTORY_SEPARATOR . 'portfolio.js'?>"></script>
 </body>
 </html>
