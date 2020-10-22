@@ -8,9 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="icon" href="./public/IMG/favicon.png" type="image/png">
     <link rel="stylesheet" href="<?= SCRIPTS . 'CSS' . DIRECTORY_SEPARATOR . 'fullpage.css' ?>">
-    <link rel="stylesheet" href="<?= SCRIPTS . 'CSS' . DIRECTORY_SEPARATOR . 'App.css'?>">
+    <link rel="stylesheet" href="<?= SCRIPTS . 'CSS' . DIRECTORY_SEPARATOR . 'App.css' ?>">
     <link rel="stylesheet" href="<?= SCRIPTS . 'CSS' . DIRECTORY_SEPARATOR . $CSS ?>">
     <title>Bessa - Jonathan</title>
 </head>
@@ -33,12 +33,13 @@
         </div>
     </nav>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="<?= SCRIPTS . 'JS' . DIRECTORY_SEPARATOR . 'ajax.js'?>"></script>
     <?= $content?>
     <script src="https://kit.fontawesome.com/1c182ad81c.js" crossorigin="anonymous"></script>
-    <script src="<?= SCRIPTS . 'JS' . DIRECTORY_SEPARATOR . 'home.js'?>" crossorigin="anonymous"></script>
-    <script src="<?= SCRIPTS . 'JS' . DIRECTORY_SEPARATOR . 'about.js'?>" crossorigin="anonymous"></script>
-    <script src="<?= SCRIPTS . 'JS' . DIRECTORY_SEPARATOR . 'portfolio.js'?>"></script>
+    <script src="./public/JS/home.js" crossorigin="anonymous"></script>
+    <script src="./public/JS/about.js" crossorigin="anonymous"></script>
 </body>
 </html>

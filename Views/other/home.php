@@ -2,7 +2,7 @@
     <section class="section s1">
         <div class="fullpage-slide">
             <div class="title title-s1">
-                <h1>Bessa Jonathan</h1>
+                <div class="bessa"><p>B</p><p>e</p><p>s</p><p>s</p><p>a</p><p>J</p><p>o</p><p>n</p><p>a</p><p>t</p><p>h</p><p>a</p><p>n</p></div>
                 <h4>Developpeur Web Junior</h4>
                 <div class="s1-buttons">
                     <a title="CV" class="btn btn-cv" target="_blank" href="cv">Voir mon CV</a>
@@ -12,11 +12,13 @@
         </div>
     </section>
     <section class="section s2">
+        <div class="fullpage-slide">
         <div class="title title-s2">
             <h2>Exemples de sites</h2>
             <div class="s2-button">
                 <a title="PAGE EN COURS DE DEV" class="btn btn-portfolio">En voir plus</a>
             </div>
+        </div>
         </div>
     </section>
     <section class="section s3">
@@ -46,6 +48,6 @@
     </section>
 </div>
 
-<script src="<?= SCRIPTS . 'JS' . DIRECTORY_SEPARATOR . 'parallax.js'?>" crossorigin="anonymous"></script>
-<script src="<?= SCRIPTS . 'JS' . DIRECTORY_SEPARATOR . 'fullpage.js'?>" crossorigin="anonymous"></script>
-<script src="<?= SCRIPTS . 'JS' . DIRECTORY_SEPARATOR . 'app.js'?>" crossorigin="anonymous"></script>
+<script src="./public/JS/parallax.js" crossorigin="anonymous"></script>
+<script src="./public/JS/fullpage.js" crossorigin="Jonathan"></script>
+<script src="./public/JS/app.js" crossorigin="Jonathan"></script>

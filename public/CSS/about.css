@@ -1,7 +1,32 @@
 body {
+    overflow-x: hidden;
     color: black;
     background: #ffffff;
 }
+/*=====================
+    Inherit CONFIG
+======================*/
+.fa-arrow-right {
+    color: white;
+}
+.scroll-down {
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto auto auto 0;
+    color: white;
+    transform: rotate(90deg);
+    align-items: center;
+}
+
+.content-s3 {
+    
+    background: black;
+}
+
+/*=====================
+    Scrollbar CONFIG
+======================*/
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -12,6 +37,7 @@ body {
 ::-webkit-scrollbar-thumb {
     background: #009adc;
   }
+
 
 ul, li {
     list-style: none;
@@ -51,60 +77,89 @@ img {
 
 
 .first-about {
-    display: grid;
-    margin-top: 5%;
+    margin-top: 25px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
     height: 90vh;
-    grid-template-columns: 5% 5% 10% 20% 10% 35% 5%;
-    grid-template-rows: 15% 5% 40% 35% 5%;
-}
-.flat {
-    grid-area: 1 / 1 / 1 / 1;
-    width: 50px;
-    height: 5px;
-    background-color: #000000;
-    margin: auto 0;
-    text-align: left;
 }
 .heading-num {
-    grid-area: 1 / 3 / 1 / 3;
+    position: absolute;
+    left: 0;
     font-size: 4rem;
     color: #009adc;
+    padding-left: 3rem;
+    padding-right: 3.2rem;
+    font-family: "roboto";
+    line-height: 1.1;
+    font-weight: 600;
+}
+.heading-num::after {
+    content: "";
+    width: 2rem;
+    height: 0.5rem;
+    background: #020b16;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
     margin: auto;
 }
+.section {
+    display: flex;
+    padding: 0 10% 0 12%;
+    box-sizing: content-box;
+    width: 100%;
+    margin: 0 auto;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
 .how {
-    grid-area: 1 / 4 / 1 / 4;
-    margin: auto;
-    font-size: 1.8rem;
+    font-size: 3rem;
+    color: #072142;
+    font-family: "roboto";
+    margin-right: 3.2rem;
+    padding-top: 0;
+}
+.who-wrap {
+    width: 48.8%;
 }
 .gras {
-    grid-area: 1 / 6 / 1 / 6;
-    margin: auto 0;
-}
-.gras h1 {
+    color: #072142;
+    margin-bottom: 2.4rem;
     font-size: 3rem;
+    font-family: "Roboto";
 }
 .para-01 {
-    grid-area: 3 / 6 / 3 / 6;
+    margin-bottom: 6.4rem;
 }
 .img-para-01 {
-    grid-area: 4 / 6 / 4 / 6;
-    width: 100%;
-    height: 100%;
-    background: orchid;
+    width: 400px;
+    height: 400px;
+    background: url(../IMG/About-me/me.jpg) no-repeat;
+    background-size: cover;
     box-shadow: -7px 25px 65px -7px rgba(0,0,0,0.6);
+    border-radius: 70% 70% 30% 30% / 30% 30% 70% 70% ;
+    margin: auto;
 }
 
 /* 02 Passions */
 
 .second-about {
-    height: 90vh;
+    height: 65vh;
     margin-top: 5%;
-    display: grid;
-    grid-template-columns: 5% 5% 10% 20% 10% 35% 5%;
-    grid-template-rows: 15% 85%;
+}
+.second-part {
+    display: block;
+    padding: 0;
+}
+.about-me {
+    padding-left: 12%;
 }
 .passions {
-    grid-area: 2 / 3 / 2 / 8;
+    width: 90%;
+    margin: 50px auto;
     height: 60vh;
     display: flex;
     flex-wrap: wrap;
@@ -122,18 +177,18 @@ img {
     background: white;
 }
 .img-passion {
-    background: url(../IMG/voyage.png) no-repeat;
+    background: url(../IMG/About-me/passions/voyage.png) no-repeat;
     background-size: 100%;
     width: 120px;
     height: 120px;
 }
 .code {
-    background: url(../IMG/dev.png) no-repeat;
+    background: url(../IMG/About-me/passions/dev.png) no-repeat;
     background-size: 100%;
     border-radius: 15px;
 }
 .music {
-    background: url(../IMG/music.png) no-repeat;
+    background: url(../IMG/About-me/passions/music.png) no-repeat;
     background-size: 100%;
     border-radius: 15px;
 
@@ -153,14 +208,16 @@ img {
 
 /* skills */
 
-.third-about {
+.third-part {
+    display: block;
+    padding: 0;
+}
+.skills-list {
+    width: 90%;
+    margin: 50px auto;
     display: grid;
     grid-template-columns: 5% 5% 10% 20% 10% 35% 5%;
     grid-template-rows: 15% 85%;
-}
-.skills-list {
-    margin-left: 30px;
-    margin-bottom: 50px;
     grid-area: 2 / 2 / 3 / 8;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -242,4 +299,166 @@ img {
     to {
         left: 25px;
     }
+}
+
+/*=============================================================================
+            PHONE PART
+=============================================================================*/
+
+@media screen and (max-width:430px) {
+
+
+/* FIRST PART */
+.content-s3 {
+    display: flex !important;
+    flex-direction: column;
+}
+.title-s3 {
+    margin: 10% 0 5% 0;
+}
+.wrapper {
+    margin-top: 10px;
+}
+.heading-num {
+    font-size: 3rem;
+}
+.first-about {
+    display: block;
+    margin: auto;
+    height: auto;
+}
+.section {
+    display: block;
+    padding: 0;
+}
+.how {
+    font-size: 2rem;
+    text-align: right;
+    margin-right: 50px;
+}
+.who-wrap {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.gras {
+    font-size: 2.2rem;
+    margin: 1.5rem auto;
+    text-align: center;
+}
+.para-01 {
+    margin-bottom: 2.5rem;
+}
+.img-para-01 {
+    height: 150px;
+    width: 200px;
+    margin: 25px auto 50px auto;
+}
+
+/* SECOND PART */
+.second-about {
+    height: inherit;
+}
+.passions {
+    display: block;
+    width: 90%;
+    margin: 50px auto;
+    position: relative;
+    height: inherit;
+}
+.passion {
+    width: 90%;
+    margin: auto;
+}
+.img-passion {
+    width: 60px;
+    height: 60px;
+}
+.music {
+    margin-top: 25px;
+}
+/* THIRD PART */
+.third-part {
+    margin-bottom: 50px;
+}
+.skills-list {
+    width: 90%;
+    margin: 0 auto;
+}
+.skill-column {
+    width: 100%;
+    margin: auto;
+}
+.titles-progress {
+    margin: 0;
+}
+.details {
+    width: 75%;
+}
+.valor-progress {
+    font-size: 1em;
+}
+}
+
+/*=====================================================
+                         TAB PART 
+======================================================*/
+
+@media screen and (min-width: 431px) and (max-width:768px) {
+    .content-s3 {
+        display: flex !important;
+        flex-direction: column;
+    }
+    .title-s3 {
+        margin: 10% 0 5% 0;
+    }
+    .scroll-down {
+        width: 150px;
+        margin: auto;
+    }
+    .first-about {
+        height: auto;
+    }
+    .section {
+        padding: 0 8% 0 20%;
+    }
+    .how, .gras {
+        font-size: 2rem;
+        line-height: 2.1;
+    }
+    .img-para-01 {
+        width: 250px;
+        height: 250px;
+    }
+
+    .second-part {
+        padding: 0;
+    }
+    .second-about {
+        height: inherit;
+    }
+    .about-me {
+        padding-left: 20%;
+    }
+    .img-passion {
+        width: 90px;
+        height: 90px;
+    }
+
+    .third-part {
+        padding: 0;
+
+    }
+    
+    .details {
+        width: 75%;
+    }
+    .titles-progress {
+        margin: 0;
+    }
+    .valor-progress {
+        font-size: 1rem;
+    }
+    
 }

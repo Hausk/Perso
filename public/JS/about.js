@@ -28,16 +28,16 @@ $(document).ready(function(){
 var position = 0;
 var ticking = false;
 
-function faireQuelqueChose() {
+function scrolldownNav() {
   if(window.scrollY > 620) {
     $('#navigation').css({background: 'rgba(0,0,0,0.7)',
                           margin : 'inherit',
                           padding : '15px 0'});
   }
   else {
-    $('#navigation').css({background: 'none',
-                          margin : '15px 0',
-                          padding : '0'});
+    $('#navigation').css({background: '#000',
+                          margin : '0',
+                          padding : '15px 0'});
   }
 }
 
@@ -46,10 +46,12 @@ window.addEventListener('scroll', function(e) {
 
   if (!ticking) {
     window.requestAnimationFrame(function() {
-      faireQuelqueChose(position);
+      scrolldownNav(position);
       ticking = false;
     });
   }
 
   ticking = true;
 });
+
+var scene = document.getElementById('scene');
