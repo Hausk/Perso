@@ -1,3 +1,4 @@
+<div id="particles-js"></div>
 <div id="fullpage">
     <section class="section s1">
         <div class="fullpage-slide">
@@ -16,7 +17,7 @@
         <div class="title title-s2">
             <h2>Exemples de sites</h2>
             <div class="s2-button">
-                <a title="PAGE EN COURS DE DEV" class="btn btn-portfolio">En voir plus</a>
+                <a title="PAGE EN COURS DE DEV" href="portfolio" class="btn btn-portfolio">En voir plus</a>
             </div>
         </div>
         </div>
@@ -25,10 +26,13 @@
         <div class="content-s3">
             <div class="title title-s3">
                 <h1>A propos de moi</h1>
+                <div class="presentation-aboutme"><p>Si vous voulez en apprendre plus sur moi c'est ici que ça se passe. Présentation - Passions - Compétences vous saurez tout de moi.</p></div>
+                <a href="about" class="btn btn-aboutme">En savoir plus</a>
             </div>
-            <div class="img-aboutme"></div>
-            <div class="presentation-aboutme"><p>Cupcake ipsum dolor. Sit amet cheesecake jelly beans carrot cake bonbon I love jelly-o pastry. Oat cake biscuit halvah I love ice cream. Pudding dragée gingerbread candy canes toffee chocolate cake jujubes. I love jelly jujubes danish apple pie donut caramels. Danish pudding tart bonbon bonbon candy topping sesame snaps dessert. Tootsie roll I love bonbon I love croissant danish ice cream I love I love. Candy canes I love lollipop I love toffee lollipop. Caramels caramels dragée muffin gummies jelly-o candy sugar plum apple pie. I love sugar plum muffin. Jelly beans I love jelly-o cupcake soufflé lemon drops cake macaroon cotton candy. Sweet brownie liquorice.</p></div>
-            <a href="about" class="btn btn-aboutme">En savoir plus</a>
+            <div class="right-s3">
+                <div class="img-aboutme"></div>
+            </div>
+            
         </div>
     </section>
     <section class="section s4">
@@ -51,3 +55,4 @@
 <script src="./public/JS/parallax.js" crossorigin="anonymous"></script>
 <script src="./public/JS/fullpage.js" crossorigin="Jonathan"></script>
 <script src="./public/JS/app.js" crossorigin="Jonathan"></script>
+<script src="./public/JS/particles.js"></script>

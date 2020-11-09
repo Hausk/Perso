@@ -6,6 +6,25 @@
     font-family: Alata;
     list-style-type: none;
 }
+body {
+    overflow-x: hidden;
+}
+
+/*=====================
+    Scrollbar CONFIG
+======================*/
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+::-webkit-scrollbar-track {
+    background: black;
+}
+::-webkit-scrollbar-thumb {
+    background: #009adc;
+}
+
+
 .purple-text {
     color: #7451eb !important;
 }
@@ -13,6 +32,7 @@
 
 body {
     background: black;
+    overflow: hidden;
 }
 h1 {
     font-size: 5rem;
@@ -23,6 +43,161 @@ h2 {
 h4 {
     font-size: 2rem;
 }
+
+#loading {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    z-index: 9999;
+    transition: .3s ease-in-out;
+    scrollbar-width: none;
+}
+.loaded {
+    visibility: hidden !important ;
+    opacity: 0 !important;
+    transition: 5s ease-in-out;
+}
+
+#loading-text {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #999;
+    width: 100px;
+    height: 30px;
+    margin: -16px 0 0 -96px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+  }
+  
+  #loading-content {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height: 300px;
+    margin: -140px 0 0 -136px;
+    border: 10px solid #009adc;
+  }
+  
+  #loading-content:after {
+    content: "";
+    position: absolute;
+    border: 3px solid #0F0;
+    left: 15px;
+    right: 15px;
+    top: 15px;
+    bottom: 15px;
+  }
+  
+  #loading-content:before {
+    content: "";
+    position: absolute;
+    border: 3px solid #5fbcd2;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+  }
+  
+  #loading-content {
+    border: 10px solid transparent;
+    border-top-color: #65FBD2;
+    border-bottom-color: #65FBD2;
+    border-radius: 50%;
+    -webkit-animation: loader 5s linear infinite;
+    -moz-animation: loader 5s linear infinite;
+    -o-animation: loader 5s linear infinite;
+    animation: loader 5s linear infinite;
+  }
+  
+  #loading-content:before {
+    border: 8px solid transparent;
+    border-top-color: #009adc;
+    border-bottom-color: #009adc;
+    border-radius: 50%;
+    -webkit-animation: loader 3s linear infinite;
+      -moz-animation: loader 2s linear infinite;
+    -o-animation: loader 2s linear infinite;
+    animation: loader 3s linear infinite;
+  }
+  
+  #loading-content:after {
+    border: 6px solid transparent;
+    border-top-color: #FF00FF;
+    border-bottom-color: #FF00FF;
+    border-radius: 50%;
+    -webkit-animation: loader 1.5s linear infinite;
+    animation: loader 1.5s linear infinite;
+      -moz-animation: loader 2s linear infinite;
+    -o-animation: loader 2s linear infinite;
+  }
+  
+  @keyframes loaders {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes loader {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  #content-wrapper {
+    color: #FFF;
+    position: fixed;
+    left: 0;
+    top: 20px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #header
+  {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    height: 100px;
+    background-color: #666;
+  }
+  
+  #content
+  {
+    width: 800px;
+    height: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #888;
+  }
+
+
+
 
 /* Navigation */
 #navigation {
@@ -91,8 +266,8 @@ h4 {
 }
 
 /* Première page */
+
 .s1 {
-    background: black;
     z-index: 5;
 }
 .title {
@@ -106,6 +281,7 @@ h4 {
     color: gray;
 }
 .bessa{
+    
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -116,12 +292,18 @@ h4 {
     transition: .2s ease-in;
 }
 .bessa p:hover {
-    transform: scale(1.2);
-    margin: auto 10px;
+    animation: float 2s ease-in-out infinite;
     color: red;
 }
 .bessa p:nth-child(6) {
     margin-left: 20px;
+}
+.bessa p:nth-child(odd) {
+    animation: float 3s infinite ease-in-out;
+}
+.bessa p:nth-child(2n+2) {
+    animation: float 3s infinite ease-in-out;
+    animation-delay: 0.5s;
 }
 .s1-buttons {
     text-align: center;
@@ -135,12 +317,11 @@ h4 {
     background-color: #ffffff;
     transition: .3s linear;
     color: black;
-    box-shadow: 0px 5px 2px 2px rgba(0,0,0,0.6);
 }
 .btn-cv {
     color: #ffffff;
     background: red;
-    box-shadow: 0px 5px 2px 2px rgba(0,0,0,0.6);
+    animation: oversize 12s ease-in-out infinite;
 }
 .btn:hover {
     background-color: grey;
@@ -166,8 +347,6 @@ nav {
     overflow: hidden;
     margin: 0 auto;
     padding: 0 auto;
-    background: url(../IMG/Bg_1.jpg) no-repeat;
-    background-size: cover;
 }
 .title-s2 {
     letter-spacing: 0.2em;
@@ -195,43 +374,46 @@ nav {
 .content-s3 {
     width: 100%;
     height: 100vh;
-    display: grid !important;
-    grid-template-rows: 10% 10% 5% 60% 10% 5% ;
-    grid-template-columns: 5% 41% 3% 41% 10% ;
-    background-color: #333;
-    background: black;
-    background-size: cover;
+    display: flex !important;
+    justify-content: space-around;
     z-index: 5;
 }
 .title-s3 {
-    margin: auto;
-    padding: 5px;
-    grid-area: 2 / 2 / 2 / 2;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto 0;
+    z-index: 15;
 }
 .title-s3 h1 {
     font-size: 4rem;
     padding: 5px;
 }
+
+.right-s3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .img-aboutme{
-    background: url(../IMG/portfolio.jpeg) no-repeat;
+    background: url(../IMG/About-me/me.jpg) no-repeat;
     background-size: cover;
-    grid-area: 4 / 4 / 4 / 4;
-    border-radius: 15px 2px 15px 2px;
     border: 2px solid white;
+    height: 400px;
+    width: 400px;
+    border-radius: 50% 25% 50% 25% / 25% 50% 25% 50%;
+    animation: rotation 15s infinite linear;
 }
 .presentation-aboutme {
     width: 90%;
-    margin: 0 auto;
+    margin: 20px auto;
     font-size: 1.2em ;
     color: white;
     text-align: center;
-    grid-area: 4 / 2 / 4 / 2;
 }
 .btn-aboutme {
-    grid-area: 5 / 4 / 5 / 4;
     text-align: center;
-    margin: auto;
+    margin: 20px auto;
 }
 
 
@@ -341,7 +523,68 @@ button:hover, button:focus {
     border-color: #66c887;
     color: #fff;
 }
+
+
+
+
+canvas{ 
+    display: block; 
+} /* ---- particles.js container ---- */ 
+#particles-js{ 
+    position:fixed;
+    width: 100%;
+    height: 100%;
+}
+
 /* Animations */
+
+@keyframes rotation {
+    from {
+        transform: rotate(0)
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0);
+    }
+    75% {
+        transform: rotate(-8deg);
+    }
+    to {
+        transform: rotate(0);
+    }
+}
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+
+@keyframes oversize {
+    0%, 74% {
+        padding: 2px 15px;
+    }
+    75%, 76% {
+        padding: 2px 25px;
+    }
+    77%, 78% {
+        padding: 10px 15px;
+    }
+    78%{
+        padding: 2px 15px;
+    }
+    86%, 100% {
+        padding: 2px 15px;
+    }
+}
 
 /* Tablette */
 @media screen and (max-width:768px) {
@@ -352,21 +595,34 @@ button:hover, button:focus {
     /* second */
 
     /* third */
+    .content-s3 {
+        flex-direction: column;
+        justify-content: center;
+    }
     .title-s3 {
-        grid-area: 2 / 2 / 2 / 5;
+        margin: 0 auto;
+        width: 85%;
     }
     .title-s3 h1 {
         font-size: 2em;
+    }
+    .right-s3 {
+        width: inherit;
+        flex-direction: inherit;
+        justify-content: inherit;
+        margin: 50px auto;
     }
     .img-aboutme {
         display: none;
     }
     .presentation-aboutme {
         font-size: 20px;
-        grid-area: 4 / 2 / 4 / 5;
     }
     .btn-aboutme {
-        grid-area: 5 / 2 / 5 / 5;
+        margin: 0 auto;
+        width: 40%;
+        font-size: 1rem;
+        padding: 15px;
     }
 
     /* fourth */

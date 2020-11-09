@@ -24,7 +24,7 @@ $(document).ready(function(){
   });
 });
 
-// scrollbar //
+// scrollbar
 var position = 0;
 var ticking = false;
 
@@ -41,12 +41,32 @@ function scrolldownNav() {
   }
 }
 
+// event sur scroll
+
+function scrolldownScrolled() {
+  if(window.scrollY > 20) {
+    $('.scroll-down').css({opacity: '0',
+                            visibility: 'hidden'});
+    $('#navigation').css({background: 'rgba(0,0,0,0.7)',
+                          margin : 'inherit',
+                          padding : '15px 0'});
+  }
+  else {
+    $('.scroll-down').css({opacity: '1',
+                            visibility: 'visible'});
+    $('#navigation').css({background: 'none',
+                          margin : '0',
+                          padding : '15px 0'});
+  }
+}
+
 window.addEventListener('scroll', function(e) {
   position = window.scrollY;
 
   if (!ticking) {
     window.requestAnimationFrame(function() {
       scrolldownNav(position);
+      scrolldownScrolled(position);
       ticking = false;
     });
   }

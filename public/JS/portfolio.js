@@ -1,63 +1,167 @@
-$(document).ready(function () {
-	function hex_initial_animation() {
-		$(".hex-wrap,.hover-notify").velocity("transition.expandIn", { stagger: 150 });
-		$(".hex-wrap").velocity("callout.pulse");
-		$(".hoverblock").velocity("fadeOut", { delay: 5000, duration: 0 });
-		}
-	hex_initial_animation();
 
-var hoverdetect = setInterval(function(){ hovernotify() }, 5000);
-function hovernotify() {
-    $(".hover-notify").velocity("callout.tada");
+
+
+// Text typing animation 
+
+var TxtType = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
+
+
+TxtType.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+    var that = this;
+    var delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+    }
+
+    setTimeout(function() {
+    that.tick();
+    }, delta);
+};
+
+window.onload = function() {
+    var elements = document.getElementsByClassName('presentation-txt');
+    for (var i=0; i<elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-type');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtType(elements[i], JSON.parse(toRotate), period);
+        }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    document.body.appendChild(css);
+};
+
+// END Typing animation
+
+
+// START CLOCK SCRIPT
+
+
+$('.timer_init').each(function updateClock() {
+    var today = new Date();
+    var hour = today.getHours();
+    var min = today.getMinutes();
+    var sec = today.getSeconds();
+    var timer = hour + ":" + min + ":" + sec;
+    $(this).html("<p class='time_actual'>"+timer+"</p>");
+})
+
+function initClock() {
+    updateClock();
+    window.setInterval("updateClock()", 1);
+  }
+
+
+d = new Date();
+d.getHours();
+d.getMinutes();
+setInterval(function () {
+  document.getElementById("clock").innerHTML = "<span id=\"actual_time\">" + d.getHours() + "<span id=\"dot_clock\">:</span>" + d.getMinutes() + "</span>";
+  d.setTime(d.getTime() + 1000);
+}, 1000);
+/* Ajax */
+
+const weatherBg = {
+    "Rain": "pluie",
+    "Clouds": "nuageux", 
+    "Snow": "neige",
+    "mist": "vent",
+    "Drizzle": "jsp",
 }
-function myStopFunction() {
-$(".hover-notify").velocity('stop', true).velocity("fadeOut");
-    clearInterval(hoverdetect);
+
+async function main(withIp = true) {
+
+    let city;
+    let from
+
+    if(withIp) {
+
+    const ip = await fetch('https://api.ipify.org?format=json')
+        .then(results => (results.json()))
+        .then(json => json.ip);
+
+    const lat = await fetch('https://freegeoip.app/json/' + ip)
+        .then(results => results.json())
+        .then(json => json.latitude);
+    
+    const long = await fetch('https://freegeoip.app/json/' + ip)
+        .then(results => results.json())
+        .then(json => json.longitude);
+
+    city = await fetch('https://geocode.xyz/' + lat + ',' + long + '?json=1')
+                .then(results => results.json())
+                .then(json => json.city);
+    } else {
+        city = document.querySelector('#city').textContent;
+    }
+
+    const weather = await fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=e82f2a8f84a2fb63f383ed9f650584c5&lang=fr&units=metric")
+                    .then(results => results.json())
+                    .then(json => json);
+
+    
+    weatherInfos(weather)
+    
 }
 
-		$(".hex-init").mouseenter(function () {
-			
-            $('.hexactive').velocity('stop', true).velocity('reverse').removeClass('hexactive');
-			myStopFunction();
+function weatherInfos(data) {
+    const name = data.name;
+    const temperature = data.main.temp;
+    const conditions = data.weather[0].main;
+    const country = data.sys.country;
 
-			var title_color =  $(this).parent().attr("data-color");
-			var title_name = $(this).parent().attr("data-title");
-			var desc_name = $(this).parent().attr("data-content");
+    document.querySelector('#city').textContent = name;
+    document.querySelector('#temperature').textContent = Math.round(temperature);
+    document.querySelector('#conditions').textContent = weatherBg[conditions];
 
-				function hex_description() {
-                    $('.code-description').velocity('stop', true).velocity("transition.slideRightBigIn");
-					$('.' + desc_name).siblings().removeClass('desc-active');
-						setTimeout(function() {
-							$('.' + desc_name).addClass('desc-active');
-							$('.code-descriptopn > div, .desc-active').children().velocity('stop', true).velocity("transition.slideRightBigIn", { stagger: 300 });
-							$('.code-title, .desc-active span').velocity({color: title_color}, { queue: false });
-							$('.code-title').text(title_name)
-						}, 0);
-			    }
-			    hex_description();
-        
-				$(this).parent().addClass('hexactive');
-                $('.hexactive').velocity({scale:"1.1"}, { duration: 200 });
+    console.log(conditions);
 
-		}).click(function () {
-            var title_color =  $(this).parent().attr("data-color");
-			var title_name = $(this).parent().attr("data-title");
-			var details_name = $(this).parent().attr("data-explain");
+    document.getElementById('country-bg').className = country.toLowerCase();
+    document.getElementById('weather').className = conditions.toLowerCase();
 
-                function details_description() {
-                $('.next-description').velocity('stop', true).velocity("transition.slideRightBigIn");
-                $('.' + details_name).siblings().removeClass('details-active');
-                    setTimeout(function() {
-                        $('.' + details_name).addClass('details-active');
-                        $('.next-descriptopn > div, .details-active').children().velocity('stop', true).velocity("transition.slideRightBigIn", { stagger: 300 });
-                        $('.next-title, .details-active span').velocity({color: title_color}, { queue: false });
-                        $('.next-title').text(title_name)
-                    }, 0);
-            }
-            details_description();
-            $('.hexactive').velocity('stop', true).velocity('reverse').removeClass('hexactive');
-            $(this).parent().addClass('hexactive');
-            $('.display-content').css({display:"block"});
-            $('.display-content').velocity({opacity:"1"}, { duration: 200});
-        })
-});
+}
+
+const city = document.querySelector('#city');
+
+    city.addEventListener('click', () => {
+        city.contentEditable = true;
+    });
+
+    city.addEventListener('keydown', (e) => {
+        if (e.isComposing || e.keyCode === 13) {
+            e.preventDefault();
+            city.contentEditable = false;
+            main(false);
+        }
+    });
+
+main();

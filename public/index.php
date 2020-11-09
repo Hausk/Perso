@@ -2,13 +2,12 @@
 
 use Router\Router;
 
+define('DB_NAME', 'Perso');
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PWD', '');
+
 require '../vendor/autoload.php';
-
-define('DB_NAME', 'dbs217388');
-define('DB_HOST', 'db5000390541.hosting-data.io');
-define('DB_USER', 'dbu186565');
-define('DB_PWD', 'Xorph91340*');
-
 
 define('VIEWS', dirname(__DIR__) . DIRECTORY_SEPARATOR . 'Views' . DIRECTORY_SEPARATOR);
 define('SCRIPTS', dirname($_SERVER['SCRIPT_NAME']) . DIRECTORY_SEPARATOR);

@@ -2,14 +2,20 @@
 
 <a href="./" class="arrow-return"><i class="fas fa-arrow-left"></i></a>
 <div class="content-s3">
-    <div class="title title-s3">
-        <h1>A propos de moi</h1>
-    </div>
-    <div class="img-aboutme"></div>
-    <div class="presentation-aboutme"><p>Cupcake ipsum dolor. Sit amet cheesecake jelly beans carrot cake bonbon I love jelly-o pastry. Oat cake biscuit halvah I love ice cream. Pudding dragée gingerbread candy canes toffee chocolate cake jujubes. I love jelly jujubes danish apple pie donut caramels. Danish pudding tart bonbon bonbon candy topping sesame snaps dessert. Tootsie roll I love bonbon I love croissant danish ice cream I love I love. Candy canes I love lollipop I love toffee lollipop. Caramels caramels dragée muffin gummies jelly-o candy sugar plum apple pie. I love sugar plum muffin. Jelly beans I love jelly-o cupcake soufflé lemon drops cake macaroon cotton candy. Sweet brownie liquorice. Chocolate bar cotton candy jelly beans. Bear claw cake halvah cupcake bear claw.</p></div>
+    <div id="particles-js"></div>
+    <div class="content-first">
+        <div class="title title-s3">
+            <h1>A propos de moi</h1>
+                <div class="presentation-aboutme"><p>Bienvenue sur ma page de présentation, je vous laisse scroller pour en savoir plus.</p></div>
+            </div>
+            <div class="right-s3">
+                <div class="img-aboutme"></div>
+            </div>
+        </div>
     <div class="scroll-down">
-        <p class="scrolled">ScrollDown</p>
-        <i class="fas fa-arrow-right"></i>
+            <p class="scrolled">Scrolldown</p>
+            <i class="fas fa-arrow-right"></i>
+    </div>
     </div>
 </div>
 <section class="wrapper">
@@ -209,3 +215,6 @@
         </div>
     </div>
 </section>
+
+
+<script src="./public/JS/particles.js"></script>

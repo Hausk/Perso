@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Application web développé par Bessa Jonathan, Pour le projet 05 de ma formation.">
+    <meta name="description" content="Site perso de moi même !">
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=8">
@@ -12,9 +12,13 @@
     <link rel="stylesheet" href="<?= SCRIPTS . 'CSS' . DIRECTORY_SEPARATOR . 'fullpage.css' ?>">
     <link rel="stylesheet" href="<?= SCRIPTS . 'CSS' . DIRECTORY_SEPARATOR . 'App.css' ?>">
     <link rel="stylesheet" href="<?= SCRIPTS . 'CSS' . DIRECTORY_SEPARATOR . $CSS ?>">
-    <title>Bessa - Jonathan</title>
+    <title>Bessa Jonathan</title>
 </head>
-<body>
+<body onLoad="initClock()">
+    <div id="loading">
+        <div id="loading-text">Chargement</div>
+        <div id="loading-content"></div>
+    </div>
     <nav>
         <div id="navigation">
             <div class="header-content">
@@ -36,7 +40,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.ui.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <?= $content?>
     <script src="https://kit.fontawesome.com/1c182ad81c.js" crossorigin="anonymous"></script>
     <script src="./public/JS/home.js" crossorigin="anonymous"></script>
